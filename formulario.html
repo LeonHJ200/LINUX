@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contacto - Distribuciones Linux</title>
+    <link rel="stylesheet" href="styl.css" />
+</head>
+<body>
+    <nav class="menu" role="navigation">
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li>
+                    <a href="#distribuciones" class="submenu-toggle" aria-expanded="false" aria-controls="submenu-distribuciones">Distribuciones</a>
+                    <ul id="submenu-distribuciones">
+                        <li><a href="distribuciones/ubuntu.html">Ubuntu</a></li>
+                        <li><a href="distribuciones/debian.html">Debian</a></li>
+                        <li><a href="distribuciones/fedora.html">Fedora</a></li>
+                        <li><a href="distribuciones/arch.html">Arch Linux</a></li>
+                        <li><a href="distribuciones/otras.html">Otras distribuciones</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#tutoriales" class="submenu-toggle" aria-expanded="false" aria-controls="submenu-tutoriales">Tutoriales</a>
+                    <ul id="submenu-tutoriales">
+                        <li><a href="tutoriales/instalacion.html">Instalación desde cero</a></li>
+                        <li><a href="tutoriales/entornos.html">Configuración de entornos gráficos</a></li>
+                        <li><a href="tutoriales/paquetes.html">Administración de paquetes</a></li>
+                        <li><a href="tutoriales/seguridad.html">Seguridad en Linux</a></li>
+                        <li><a href="tutoriales/automatizacion.html">Automatización con scripts</a></li>
+                    </ul>
+                </li>
+                <li><a href="comunidad.html">Comunidad</a></li>
+                <li>
+                    <a href="#herramientas" class="submenu-toggle" aria-expanded="false" aria-controls="submenu-herramientas">Herramientas</a>
+                    <ul id="submenu-herramientas">
+                        <li><a href="herramientas/terminal.html">Terminal y comandos básicos</a></li>
+                        <li><a href="herramientas/editores.html">Editores de texto</a></li>
+                        <li><a href="herramientas/desarrollo.html">Software de desarrollo</a></li>
+                        <li><a href="herramientas/productividad.html">Aplicaciones de productividad</a></li>
+                        <li><a href="herramientas/gestion-archivos.html">Sistemas de gestión de archivos</a></li>
+                    </ul>
+                </li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="formulario.html">Formulario de contacto</a></li>
+            </ul>
+        </nav>
+
+    <main>
+        <h1>Formulario de Contacto</h1>
+        <section>
+            <form action="https://formspree.io/f/meokkley" method="POST">
+                <div style="margin-bottom: 1.5rem;">
+                    <label for="name"><strong>Nombre:</strong></label><br/>
+                    <input type="text" id="name" name="name" required style="width: 100%; padding: 0.75rem; border: 1px solid #cbd5e0; border-radius: 8px; margin-top: 0.5rem;">
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                    <label for="email"><strong>Email:</strong></label><br/>
+                    <input type="email" id="email" name="email" required style="width: 100%; padding: 0.75rem; border: 1px solid #cbd5e0; border-radius: 8px; margin-top: 0.5rem;">
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                    <label for="subject"><strong>Asunto:</strong></label><br/>
+                    <input type="text" id="subject" name="subject" required style="width: 100%; padding: 0.75rem; border: 1px solid #cbd5e0; border-radius: 8px; margin-top: 0.5rem;">
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                    <label for="message"><strong>Mensaje:</strong></label><br/>
+                    <textarea id="message" name="message" rows="6" required style="width: 100%; padding: 0.75rem; border: 1px solid #cbd5e0; border-radius: 8px; margin-top: 0.5rem;"></textarea>
+                </div>
+
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Distribuciones Linux</p>
+    </footer>
+</body>
+</html>

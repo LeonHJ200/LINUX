@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Software de desarrollo - Linux</title>
+    <link rel="stylesheet" href="../styl.css">
+</head>
+<body>
+    <div class="contenedor">
+        <nav class="menu" role="navigation">
+            <ul class="menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li>
+                    <a href="#distribuciones" class="submenu-toggle" aria-expanded="false" aria-controls="submenu-distribuciones">Distribuciones</a>
+                    <ul id="submenu-distribuciones">
+                        <li><a href="../distribuciones/ubuntu.html">Ubuntu</a></li>
+                        <li><a href="../distribuciones/debian.html">Debian</a></li>
+                        <li><a href="../distribuciones/fedora.html">Fedora</a></li>
+                        <li><a href="../distribuciones/arch.html">Arch Linux</a></li>
+                        <li><a href="../distribuciones/otras.html">Otras distribuciones</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#tutoriales" class="submenu-toggle" aria-expanded="false" aria-controls="submenu-tutoriales">Tutoriales</a>
+                    <ul id="submenu-tutoriales">
+                        <li><a href="../tutoriales/instalacion.html">Instalación desde cero</a></li>
+                        <li><a href="../tutoriales/entornos.html">Configuración de entornos gráficos</a></li>
+                        <li><a href="../tutoriales/paquetes.html">Administración de paquetes</a></li>
+                        <li><a href="../tutoriales/seguridad.html">Seguridad en Linux</a></li>
+                        <li><a href="../tutoriales/automatizacion.html">Automatización con scripts</a></li>
+                    </ul>
+                </li>
+                <li><a href="../comunidad.html">Comunidad</a></li>
+                <li>
+                    <a href="#herramientas" class="submenu-toggle" aria-expanded="false" aria-controls="submenu-herramientas">Herramientas</a>
+                    <ul id="submenu-herramientas">
+                        <li><a href="../herramientas/terminal.html">Terminal y comandos básicos</a></li>
+                        <li><a href="../herramientas/editores.html">Editores de texto</a></li>
+                        <li><a href="../herramientas/desarrollo.html" class="activo" aria-current="page">Software de desarrollo</a></li>
+                        <li><a href="../herramientas/productividad.html">Aplicaciones de productividad</a></li>
+                        <li><a href="../herramientas/gestion-archivos.html">Sistemas de gestión de archivos</a></li>
+                    </ul>
+                </li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="../formulario.html">Formulario de contacto</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <h1>Software de desarrollo en Linux</h1>
+
+            <h2>1. Editores y Entornos de Desarrollo (IDE)</h2>
+            <p>Para escribir y gestionar código, los desarrolladores pueden usar:</p>
+            <ul>
+                <li>Visual Studio Code: Ligero y con soporte para múltiples lenguajes.</li>
+                <li>JetBrains IntelliJ IDEA / PyCharm / CLion: IDEs avanzados para Java, Python y C++.</li>
+                <li>Eclipse: Popular para desarrollo en Java y otros lenguajes.</li>
+                <li>Vim / Neovim: Potente editor para desarrolladores avanzados.</li>
+            </ul>
+
+            <h2>2. Herramientas de compilación y gestión de código</h2>
+            <p>Dependiendo del lenguaje, se utilizan compiladores como:</p>
+            <ul>
+                <li>GCC (GNU Compiler Collection): Para C, C++ y otros lenguajes.<br><code>sudo apt install gcc g++</code></li>
+                <li>Clang: Alternativa moderna y eficiente a GCC.<br><code>sudo apt install clang</code></li>
+                <li>Make: Para la automatización de compilación en proyectos grandes.<br><code>sudo apt install make</code></li>
+                <li>CMake: Facilita la compilación en múltiples plataformas.</li>
+            </ul>
+
+            <h2>3. Control de versiones</h2>
+            <p>Para gestionar código en equipo y realizar seguimiento de cambios:</p>
+            <ul>
+                <li>Git: Sistema de control de versiones distribuido.<br><code>sudo apt install git</code><br><code>git init</code></li>
+                <li>GitHub / GitLab: Plataformas para gestión de repositorios en línea.</li>
+            </ul>
+
+            <h2>4. Contenedores y virtualización</h2>
+            <p>Para desarrollar en entornos aislados:</p>
+            <ul>
+                <li>Docker: Crea contenedores ligeros para aplicaciones.<br><code>sudo apt install docker.io</code></li>
+                <li>Podman: Alternativa a Docker sin necesidad de daemon root.</li>
+                <li>VirtualBox: Permite ejecutar sistemas virtualizados para pruebas.</li>
+            </ul>
+
+            <h2>5. Herramientas de depuración y pruebas</h2>
+            <p>Para analizar y mejorar el código:</p>
+            <ul>
+                <li>GDB: Depurador para programas en C/C++.</li>
+                <li>Valgrind: Detecta errores en memoria y optimiza rendimiento.</li>
+                <li>JUnit / pytest: Frameworks de pruebas para Java y Python.</li>
+            </ul>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Linux en Acción. Todos los derechos reservados.</p>
+            <p>Este sitio proporciona información con fines educativos y no pretende infringir derechos de autor.  
+  Todos los nombres y marcas registradas pertenecen a sus respectivos propietarios.</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sistemas de gestión de archivos - Linux</title>
+    <link rel="stylesheet" href="../styl.css">
+</head>
+<body>
+    <div class="contenedor">
+        <nav class="menu" role="navigation">
+            <ul class="menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li>
+                    <a href="#distribuciones" class="submenu-toggle" aria-expanded="false" aria-controls="submenu-distribuciones">Distribuciones</a>
+                    <ul id="submenu-distribuciones">
+                        <li><a href="../distribuciones/ubuntu.html">Ubuntu</a></li>
+                        <li><a href="../distribuciones/debian.html">Debian</a></li>
+                        <li><a href="../distribuciones/fedora.html">Fedora</a></li>
+                        <li><a href="../distribuciones/arch.html">Arch Linux</a></li>
+                        <li><a href="../distribuciones/otras.html">Otras distribuciones</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#tutoriales" class="submenu-toggle" aria-expanded="false" aria-controls="submenu-tutoriales">Tutoriales</a>
+                    <ul id="submenu-tutoriales">
+                        <li><a href="../tutoriales/instalacion.html">Instalación desde cero</a></li>
+                        <li><a href="../tutoriales/entornos.html">Configuración de entornos gráficos</a></li>
+                        <li><a href="../tutoriales/paquetes.html">Administración de paquetes</a></li>
+                        <li><a href="../tutoriales/seguridad.html">Seguridad en Linux</a></li>
+                        <li><a href="../tutoriales/automatizacion.html">Automatización con scripts</a></li>
+                    </ul>
+                </li>
+                <li><a href="../comunidad.html">Comunidad</a></li>
+                <li>
+                    <a href="#herramientas" class="submenu-toggle" aria-expanded="false" aria-controls="submenu-herramientas">Herramientas</a>
+                    <ul id="submenu-herramientas">
+                        <li><a href="../herramientas/terminal.html">Terminal y comandos básicos</a></li>
+                        <li><a href="../herramientas/editores.html">Editores de texto</a></li>
+                        <li><a href="../herramientas/desarrollo.html">Software de desarrollo</a></li>
+                        <li><a href="../herramientas/productividad.html">Aplicaciones de productividad</a></li>
+                        <li><a href="../herramientas/gestion-archivos.html" class="activo" aria-current="page">Sistemas de gestión de archivos</a></li>
+                    </ul>
+                </li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="../formulario.html">Formulario de contacto</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <h1>Sistemas de gestión de archivos en Linux</h1>
+
+            <h2>1. Comandos básicos para gestión de archivos</h2>
+            <p>Para manejar archivos y directorios desde la terminal:</p>
+            <ul>
+                <li><code>ls</code> &rarr; Lista archivos en un directorio.</li>
+                <li><code>cd &lt;directorio&gt;</code> &rarr; Cambia de directorio.</li>
+                <li><code>mkdir &lt;nombre&gt;</code> &rarr; Crea un nuevo directorio.</li>
+                <li><code>rm &lt;archivo&gt;</code> &rarr; Borra un archivo.</li>
+                <li><code>mv &lt;origen&gt; &lt;destino&gt;</code> &rarr; Mueve o renombra un archivo.</li>
+                <li><code>cp &lt;origen&gt; &lt;destino&gt;</code> &rarr; Copia un archivo o directorio.</li>
+                <li><code>find &lt;ruta&gt; -name "&lt;nombre&gt;"</code> &rarr; Busca archivos por nombre.</li>
+            </ul>
+
+            <h2>2. Administradores de archivos gráficos</h2>
+            <ul>
+                <li><strong>Nautilus:</strong> Administrador predeterminado en GNOME, fácil de usar.</li>
+                <li><strong>Dolphin:</strong> Potente gestor de KDE Plasma, con opciones avanzadas.</li>
+                <li><strong>Thunar:</strong> Ligero y rápido, ideal para XFCE.</li>
+                <li><strong>PCManFM:</strong> Alternativa liviana para LXQt.</li>
+                <li><strong>Caja:</strong> Administrador usado en el entorno MATE.</li>
+            </ul>
+
+            <h2>3. Montaje y gestión de sistemas de archivos</h2>
+            <ul>
+                <li><code>mount /dev/sdX /mnt/punto_de_montaje</code> &rarr; Monta un dispositivo.</li>
+                <li><code>umount /mnt/punto_de_montaje</code> &rarr; Desmonta un dispositivo.</li>
+                <li><code>df -h</code> &rarr; Muestra el uso del espacio en disco.</li>
+                <li><code>du -sh &lt;ruta&gt;</code> &rarr; Muestra el tamaño de una carpeta específica.</li>
+            </ul>
+
+            <h2>4. Gestión de permisos y acceso</h2>
+            <ul>
+                <li><code>chmod 755 &lt;archivo&gt;</code> &rarr; Configura permisos de ejecución.</li>
+                <li><code>chown usuario:grupo &lt;archivo&gt;</code> &rarr; Cambia propietario y grupo de un archivo.</li>
+                <li><code>ls -l</code> &rarr; Muestra permisos detallados de los archivos.</li>
+            </ul>
+
+            <h2>5. Compresión y archivado de archivos</h2>
+            <ul>
+                <li><code>tar -cvf archivo.tar carpeta/</code> &rarr; Empaqueta archivos sin comprimir.</li>
+                <li><code>tar -xvf archivo.tar</code> &rarr; Extrae un paquete .tar.</li>
+                <li><code>zip archivo.zip carpeta/</code> &rarr; Comprime en formato ZIP.</li>
+                <li><code>unzip archivo.zip</code> &rarr; Extrae un archivo ZIP.</li>
+                <li><code>gzip archivo.txt</code> &rarr; Comprime un archivo en formato .gz.</li>
+            </ul>
+
+            <h2>6. Sincronización y copias de seguridad</h2>
+            <p>Para mantener archivos seguros y sincronizados entre dispositivos:</p>
+            <ul>
+                <li><strong>rsync:</strong> Sincroniza archivos entre directorios o sistemas.</li>
+                <li><code>rsync -av --progress origen/ destino/</code></li>
+                <li><strong>Timeshift:</strong> Herramienta gráfica para copias de seguridad del sistema.</li>
+                <li><strong>BorgBackup:</strong> Solución eficiente para respaldos incrementales y cifrados.</li>
+            </ul>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Linux en Acción. Todos los derechos reservados.</p>
+            <p>Este sitio proporciona información con fines educativos y no pretende infringir derechos de autor.  
+            Todos los nombres y marcas registradas pertenecen a sus respectivos propietarios.</p>
+        </footer>
+    </div>
+</body>
+</html>
