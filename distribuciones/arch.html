@@ -8,43 +8,55 @@
 </head>
 <body>
     <header>
-        <nav role="navigation">
-            <ul class="menu">
-                <li><a href="../index.html">Inicio</a></li>
-                <li aria-haspopup="true">
-                    <a href="#">Distribuciones</a>
-                    <ul>
-                        <li><a href="../distribuciones/ubuntu.html">Ubuntu</a></li>
-                        <li><a href="../distribuciones/debian.html">Debian</a></li>
-                        <li><a href="../distribuciones/fedora.html">Fedora</a></li>
-                        <li><a href="../distribuciones/arch.html">Arch Linux</a></li>
-                        <li><a href="../distribuciones/otras.html">Otras distribuciones</a></li>
-                    </ul>
-                </li>
-                <li aria-haspopup="true">
-                    <a href="#">Tutoriales</a>
-                    <ul>
-                        <li><a href="../tutoriales/instalacion.html">Instalación desde cero</a></li>
-                        <li><a href="../tutoriales/entornos.html">Configuración de entornos gráficos</a></li>
-                        <li><a href="../tutoriales/paquetes.html">Administración de paquetes</a></li>
-                        <li><a href="../tutoriales/seguridad.html">Seguridad en Linux</a></li>
-                        <li><a href="../tutoriales/automatizacion.html">Automatización con scripts</a></li>
-                    </ul>
-                </li>
-                <li><a href="../comunidad.html">Comunidad</a></li>
-                <li aria-haspopup="true">
-                    <a href="#">Herramientas</a>
-                    <ul>
-                        <li><a href="../herramientas/terminal.html">Terminal y comandos básicos</a></li>
-                        <li><a href="../herramientas/editores.html">Editores de texto</a></li>
-                        <li><a href="../herramientas/desarrollo.html">Software de desarrollo</a></li>
-                        <li><a href="../herramientas/productividad.html">Aplicaciones de productividad</a></li>
-                        <li><a href="../herramientas/gestion-archivos.html">Sistemas de gestión de archivos</a></li>
-                    </ul>
-                </li>
-                <li><a href="../blog.html">Blog</a></li>
-                <li><a href="../formulario.html">Formulario de contacto</a></li>
-            </ul>
+        <nav class="menu" role="navigation">
+          <ul class="menu">
+            <li><a href="../index.html">Inicio</a></li>
+            <li>
+              <a href="#distribuciones" class="submenu-toggle"
+                 aria-expanded="false"
+                 aria-controls="submenu-distribuciones">
+                Distribuciones
+              </a>
+              <ul id="submenu-distribuciones">
+                <li><a href="../distribuciones/ubuntu.html">Ubuntu</a></li>
+                <li><a href="../distribuciones/debian.html">Debian</a></li>
+                <li><a href="../distribuciones/fedora.html">Fedora</a></li>
+                <li><a href="../distribuciones/arch.html">Arch Linux</a></li>
+                <li><a href="../distribuciones/otras.html">Otras distribuciones</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#tutoriales" class="submenu-toggle"
+                 aria-expanded="false"
+                 aria-controls="submenu-tutoriales">
+                Tutoriales
+              </a>
+              <ul id="submenu-tutoriales">
+                <li><a href="../tutoriales/instalacion.html">Instalación desde cero</a></li>
+                <li><a href="../tutoriales/entornos.html">Configuración de entornos gráficos</a></li>
+                <li><a href="../tutoriales/paquetes.html">Administración de paquetes</a></li>
+                <li><a href="../tutoriales/seguridad.html">Seguridad en Linux</a></li>
+                <li><a href="../tutoriales/automatizacion.html">Automatización con scripts</a></li>
+              </ul>
+            </li>
+            <li><a href="../comunidad.html">Comunidad</a></li>
+            <li>
+              <a href="#herramientas" class="submenu-toggle"
+                 aria-expanded="false"
+                 aria-controls="submenu-herramientas">
+                Herramientas
+              </a>
+              <ul id="submenu-herramientas">
+                <li><a href="../herramientas/terminal.html">Terminal y comandos básicos</a></li>
+                <li><a href="../herramientas/editores.html">Editores de texto</a></li>
+                <li><a href="../herramientas/desarrollo.html">Software de desarrollo</a></li>
+                <li><a href="../herramientas/productividad.html">Aplicaciones de productividad</a></li>
+                <li><a href="../herramientas/gestion-archivos.html">Sistemas de gestión de archivos</a></li>
+              </ul>
+            </li>
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../formulario.html">Formulario de contacto</a></li>
+          </ul>
         </nav>
     </header>
 

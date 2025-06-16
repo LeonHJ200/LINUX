@@ -11,13 +11,6 @@ body {
     color: #2d3748;
 }
 
-.contenedor {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
-
 main, section {
     max-width: 900px;
     margin: 2rem auto;
@@ -82,12 +75,10 @@ a:hover {
 nav {
     background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
+    position: relative; /* Cambiado de sticky a relative */
     z-index: 1000;
 }
 
-/* Navigation base styles */
 nav ul {
     list-style: none;
     display: flex;
@@ -105,7 +96,6 @@ nav ul li a {
     color: #fff;
     font-weight: 500;
     transition: all 0.3s ease;
-    white-space: nowrap;
 }
 
 nav ul li:hover > a {
@@ -113,7 +103,6 @@ nav ul li:hover > a {
     transform: translateY(-1px);
 }
 
-/* Submenus */
 nav ul li ul {
     display: none;
     position: absolute;
@@ -149,14 +138,6 @@ nav ul li ul li a:hover {
     padding-left: 1.5rem;
 }
 
-/* Responsive Images and iframes */
-img, iframe, video {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Code blocks and pre for better readability */
 pre {
     background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
     color: #e2e8f0;
@@ -231,135 +212,120 @@ footer {
     margin-top: 3rem;
 }
 
-/* --- Responsive Styles --- */
-
-/* Mobile Styles (default) */
-nav ul {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-}
-
-nav > ul > li > a {
-    padding: 1rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-nav ul li ul {
-    position: static;
-    background: transparent;
-    box-shadow: none;
-    border-radius: 0;
-}
-
-nav ul li ul li a {
-    padding-left: 2rem;
-    border-bottom: none;
-    background-color: rgba(0, 0, 0, 0.1);
-}
-
-/* Hide submenus by default: */
-nav ul li ul {
-    display: none;
-}
-
-/* When submenu toggle is active show submenu */
-nav ul li.open > ul {
-    display: block;
-}
-
-/* Hamburger menu button */
-.mobile-menu-toggle {
-    display: flex;
-    justify-content: flex-end;
-    padding: 1rem;
-    background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
-    border: none;
-    color: white;
-    font-size: 2rem;
-    cursor: pointer;
-}
-
-/* Ensure body margin and padding for mobile */
-body {
-    margin: 0;
-    padding: 0;
-}
-
-/* Container paddings smaller on mobile */
-main, section {
-    margin: 1rem;
-    padding: 1.5rem;
-}
-
-/* Tablet Styles */
-@media (min-width: 641px) {
+@media (max-width: 768px) {
+    main, section {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
     nav ul {
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    nav ul li ul {
+        position: static;
+        box-shadow: none;
+        border-radius: 0;
+    }
+    
+    nav ul li a {
+        padding: 0.75rem 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    nav ul li ul li a {
+        padding-left: 2rem;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
     }
 
-    nav > ul > li > a {
-        border-top: none;
-        padding: 1rem 1.5rem;
+    main, section {
+        margin: 0.5rem;
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: stretch;
     }
 
     nav ul li ul {
-        position: absolute;
-        background: linear-gradient(180deg, #2d3748 0%, #4a5568 100%);
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
-        border-radius: 0 0 8px 8px;
-        min-width: 220px;
+        position: static;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    nav ul li a {
+        padding: 0.75rem 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     nav ul li ul li a {
-        background-color: transparent;
-        padding-left: 1rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    nav ul li ul li a:hover {
-        background-color: rgba(255, 255, 255, 0.15);
-        padding-left: 1.5rem;
-    }
-
-    /* Show submenu on hover in tablet and above */
-    nav ul li:hover > ul {
-        display: block;
-    }
-
-    /* Hide hamburger button on tablet+ */
-    .mobile-menu-toggle {
-        display: none;
-    }
-
-    main, section {
-        max-width: 900px;
-        margin: 2rem auto;
-        padding: 2rem;
-    }
-
-    .contenedor {
-        max-width: 1100px;
+        padding-left: 2rem;
+        background-color: rgba(0, 0, 0, 0.2);
     }
 }
 
-/* Desktop Styles */
-@media (min-width: 1025px) {
-    nav ul {
-        flex-wrap: nowrap;
-        justify-content: center;
-    }
-
+@media (min-width: 1024px) {
     main, section {
-        max-width: 900px;
-        margin: 2rem auto;
-        padding: 2rem;
-    }
-
-    .contenedor {
         max-width: 1200px;
     }
 }
 
+.social-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 15px;
+      text-decoration: none;
+      color: inherit;
+      padding: 10px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .social-link:hover {
+      background-color: #f0f0f0;
+    }
+    
+    .social-icon {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+    }
+    
+    .social-links {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .social-links li {
+      margin: 0;
+    }
+    
+    .platform-name {
+      font-weight: bold;
+      margin-right: 5px;
+    }
